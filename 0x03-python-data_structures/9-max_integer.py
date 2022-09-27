@@ -1,18 +1,9 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    """
-find the maximum value of a list
-Args:
-my_list - list to search
-Return:
-None - if list is empty
-maximum of list
-"""
-    L = len(my_list)
-    if L == 0:
+    if len(my_list) == 0:
         return None
-    Max = my_list[0]
-    for elem in my_list:
-        if elem > Max:
-            Max = elem
-            return Max
+    ret = my_list[0]
+    for num in my_list:
+        if num > ret:
+            ret = num
+            return ret
